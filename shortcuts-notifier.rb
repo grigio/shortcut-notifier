@@ -108,7 +108,7 @@ def interpret(keycode,state)
      @queue.delete key+" "
    elsif Pressed == state and !@queue.empty? and not @combo_keycodes.include? keycode
       puts "#{@dict[keycode]} Pressed"
-      `notify-send "#{@queue} #{key}"`
+      `notify-send -t 500 "#{@queue} #{key}"`
    end
 end
       
